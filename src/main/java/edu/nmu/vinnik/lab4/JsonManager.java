@@ -12,11 +12,11 @@ import java.nio.file.Paths;
 
 public class JsonManager {
     public static void writeToJsonFile(Object object, String filePath) {
-        String path = getNormalizePath(filePath);
+        //String path = getNormalizePath(filePath);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        try (FileWriter writer = new FileWriter(path)) {
+        try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(object, writer);
         }
         catch (IOException e) {
@@ -27,11 +27,11 @@ public class JsonManager {
     public static University readFromJsonFile(String filePath) {
         University result = null;
 
-        String path = getNormalizePath(filePath);
+        //String path = getNormalizePath(filePath);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        try (FileReader reader = new FileReader(path)) {
+        try (FileReader reader = new FileReader(filePath)) {
             result = gson.fromJson(reader, University.class);
         }
         catch (IOException e) {
@@ -40,9 +40,9 @@ public class JsonManager {
         return result;
     }
 
-    private static String getNormalizePath(String filePath) {
+    /*private static String getNormalizePath(String filePath) {
         Path path = Paths.get(filePath);
 
         return path.normalize().toString();
-    }
+    }*/
 }
