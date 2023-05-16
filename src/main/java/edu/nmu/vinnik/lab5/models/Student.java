@@ -9,4 +9,5 @@ public class Student {
     public String name;
     public String patronymicName;
     public Date dateOfBirth;
+    public int scoreBookId;
 }
