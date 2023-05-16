@@ -1,4 +1,4 @@
-package edu.nmu.vinnik.lab5;
+package edu.nmu.vinnik.lab5.repositories;
 
 import edu.nmu.vinnik.lab5.models.Student;
 
