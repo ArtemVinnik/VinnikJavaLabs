@@ -1,6 +1,7 @@
 package edu.nmu.vinnik;
 
 import edu.nmu.vinnik.lab2.MatrixService;
+import edu.nmu.vinnik.lab5.services.StudentService;
 
 public class App
 {
@@ -8,6 +9,12 @@ public class App
     {
         System.out.println( "Hello World!" );
 
+        StudentService studentService = new StudentService();
+
+        studentService.displayStudentsByMonth();
+    }
+
+    private void displayMatrix() {
         MatrixService matrixService = new MatrixService();
 
         int[][] matrix = matrixService.create();
