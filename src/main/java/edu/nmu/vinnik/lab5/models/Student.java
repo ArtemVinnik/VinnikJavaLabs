@@ -4,10 +4,9 @@ import java.util.Date;
 import java.util.UUID;
 
 public class Student {
-    private UUID id;
-    private String surname;
-    private String name;
-    private String patronymicName;
-    private Date dateOfBirth;
-    
+    public UUID id;
+    public String surname;
+    public String name;
+    public String patronymicName;
+    public Date dateOfBirth;
 }
