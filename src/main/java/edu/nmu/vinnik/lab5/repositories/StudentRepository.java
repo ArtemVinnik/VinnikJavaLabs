@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.UUID;
 
 public class StudentRepository {
-    private static final String DB_URL = "jdbc:sqlserver://localhost\\MSSQLSERVER2022;databaseName=University;integratedSecurity=true;";
+    private static final String DB_URL = "jdbc:sqlserver://localhost;encrypt=true;instanceName=EPUADNIW0286\\SQLEXPRESS;databaseName=University;integratedSecurity=true;";
 
     public Collection<Student> getStudentsByMonthOfBirth(int numberOfMonth) {
         Collection<Student> students = new ArrayList<Student>();
@@ -42,7 +42,7 @@ public class StudentRepository {
             }
         }
         catch (Exception ex) {
-
+            System.out.println(ex.getMessage());
         }
 
         return students;

@@ -16,18 +16,18 @@ public class StudentService {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter number of month:");
         System.out.println();
-        System.out.println("January\t-\t1");
+        System.out.println("Enter number of month:");
+        System.out.println("January\t\t-\t1");
         System.out.println("February\t-\t2");
-        System.out.println("March\t-\t3");
-        System.out.println("April\t-\t4");
-        System.out.println("May\t-\t5");
-        System.out.println("June\t-\t6");
-        System.out.println("July\t-\t7");
-        System.out.println("August\t-\t8");
+        System.out.println("March\t\t-\t3");
+        System.out.println("April\t\t-\t4");
+        System.out.println("May\t\t\t-\t5");
+        System.out.println("June\t\t-\t6");
+        System.out.println("July\t\t-\t7");
+        System.out.println("August\t\t-\t8");
         System.out.println("September\t-\t9");
-        System.out.println("October\t-\t10");
+        System.out.println("October\t\t-\t10");
         System.out.println("November\t-\t11");
         System.out.println("December\t-\t12");
 
@@ -43,7 +43,9 @@ public class StudentService {
                     System.out.println("Input correct number");
                 }
             }
+            scanner.nextLine();
         }
+        scanner.close();
 
         displayStudents(students);
     }
